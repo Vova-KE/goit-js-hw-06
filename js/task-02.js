@@ -15,7 +15,7 @@ const createListItemWithMarkup = ingredients.map(ingredient => {
   return createListItem;
 })
 
-const list = document.getElementById('ingredients');
+const list = document.querySelector('#ingredients');
 
 list.append(...createListItemWithMarkup);
 
