@@ -14,13 +14,14 @@ const images = [
 ];
 
 const list = document.querySelector('.gallery');
-list.style.listStyleType = 'none';
 
 const createListItem = images.map(image => {
   return `<li class = "list__item">
       <img
         src = ${image.url},
         alt = '${image.alt}',
+        width = 200,
+        height = 100,
         class = "list__img",
       >
     </li>`
@@ -28,3 +29,6 @@ const createListItem = images.map(image => {
 ).join(' ');
   
 list.insertAdjacentHTML('afterbegin', createListItem)
+
+list.style.cssText = `display: grid; grid-template-columns: 300px 300px 300px;`
+list.style.listStyleType = 'none';
