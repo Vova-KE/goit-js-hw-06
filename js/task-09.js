@@ -6,8 +6,10 @@ const body = document.querySelector('body');
 const buttonChangeColor = document.querySelector('.change-color');
 const titleCurrentColorBody = document.querySelector('.color');
 
-const handleButtonChangeColor = () => {
-  titleCurrentColorBody.innerHTML = (body.style.backgroundColor = getRandomHexColor());
+const handleButtonChangeColor = (event) => {
+  // titleCurrentColorBody.innerHTML = (body.style.backgroundColor = getRandomHexColor());
+  body.style.backgroundColor = getRandomHexColor();
+  titleCurrentColorBody.innerHTML = body.style.backgroundColor;
 };
- 
+
 buttonChangeColor.addEventListener('click', handleButtonChangeColor);
