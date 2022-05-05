@@ -5,6 +5,7 @@ validationInput.addEventListener("blur", (event) => {
 
     switch (validationInput.textContent.length) {
         case Number(validationInput.getAttribute('data-length')):
+            validationInput.classList.remove('invalid');
             validationInput.classList.add('valid');
             break;
         case 0:
