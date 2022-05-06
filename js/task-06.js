@@ -13,5 +13,6 @@ validationInput.addEventListener("blur", (event) => {
             break;
         default:
             validationInput.classList.add('invalid');
+            validationInput.classList.remove('valid');
     }
 });
